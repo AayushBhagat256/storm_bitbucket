@@ -21,6 +21,7 @@ import FileCopyIcon from '@mui/icons-material/FileCopy';
 
 //Form Elements
 import { formEl } from "../constants";
+import { FormLabel, Radio, RadioGroup } from "@mui/material";
 
 const TextFieldInput = ({ item, handleValue, deleteEl, handleRequired, handleElType,duplicateElement }) => {
   return (
@@ -41,32 +42,30 @@ const TextFieldInput = ({ item, handleValue, deleteEl, handleRequired, handleElT
                 fullWidth
                 required={item.required}
                 placeholder="Textfield Label"
+                defaultValue={"What do you like most about your work environment at [Company Name]?"}
+                InputProps={{
+                    readOnly: true,
+                }}
                 sx={{ mb: 2 }}
               />
               <TextField
                 variant="outlined"
                 fullWidth
                 placeholder="Textfield Input Field"
-                disabled
+                // disabled
               />
             </Grid>
             <Grid item xs={3}>
               <FormControl fullWidth>
-                <InputLabel id="el-type-label">Type</InputLabel>
-                <Select
-                  labelId="el-type-label"
-                  id="el-type"
-                  label="Type"
-                  value={item.type}
-                  onChange={(e)=>handleElType(item.id,e.target.value)}
+              <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
+                <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="female"
+                    name="radio-buttons-group"
                 >
-                  {formEl &&
-                    formEl.map((el, key) => (
-                      <MenuItem key={key} value={el.value}>
-                        {el.label}
-                      </MenuItem>
-                    ))}
-                </Select>
+                    <FormControlLabel value="female" control={<Radio />} label="Text" />
+                    <FormControlLabel value="male" control={<Radio />} label="Radio" />
+                </RadioGroup>
               </FormControl>
             </Grid>
           </Grid>

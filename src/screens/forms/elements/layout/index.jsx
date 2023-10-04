@@ -21,6 +21,7 @@ import FileCopyIcon from ' @mui/icons-material/FileCopy';
 
 //Form Elements
 import { formEl } from "../../constants";
+import { FormLabel, Radio, RadioGroup } from "@mui/material";
 
 const Layout = ({
   item,
@@ -46,7 +47,17 @@ const Layout = ({
             </Grid>
             <Grid item xs={3}>
               <FormControl fullWidth>
-                <InputLabel id="el-type-label">Type</InputLabel>
+                {/* <FormControlLabel control={<Switch />} label="Required" /> */}
+                <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
+                <RadioGroup
+                    aria-labelledby="demo-radio-buttons-group-label"
+                    defaultValue="female"
+                    name="radio-buttons-group"
+                >
+                    <FormControlLabel value="female" control={<Radio />} label="Text" />
+                    <FormControlLabel value="male" control={<Radio />} label="Radio" />
+                </RadioGroup>
+                {/* <InputLabel id="el-type-label">Type</InputLabel>
                 <Select
                   labelId="el-type-label"
                   id="el-type"
@@ -60,7 +71,7 @@ const Layout = ({
                         {el.label}
                       </MenuItem>
                     ))}
-                </Select>
+                </Select> */}
               </FormControl>
             </Grid>
           </Grid>
