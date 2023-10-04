@@ -234,53 +234,22 @@ export default function ContactEmpForm() {
 
                                     <WrapItem color={'white'}>
                                         <Box bg={'linear-gradient(180deg, #7620ff 0%, #7620ff 100%)'} boxShadow={'5px 10px 20px 0px rgba(129, 198, 232, 0.30)'} className='infobox' borderRadius={'lg'} id='conbox'  >
-                                            <Heading ml={'40px'} color={'white'} >Contact us at</Heading>
-                                            <Text ml={'40px'} color={'white'} mt={{ sm: 2, md: 2, lg: 2 }} >
-                                                Get in touch with us..
-                                            </Text>
+                                            <Heading ml={'40px'} color={'white'} >Empowers individuals to express their honest opinions without fear</Heading>
+                                            <br />
+
                                             <Box marginTop={0} id='box123' py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                                                <VStack pl={0} ml={{ base: 0, md: 5 }} align={'flex-start'} spacing={2} >
-                                                    <Button
-                                                        size="md"
-                                                        height="48px"
-                                                        width="auto"
-                                                        variant="ghost"
-                                                        color={'white'}
-                                                        _hover={{ border: '2px solid #1C6FEB' }}
-                                                        leftIcon={<MdPhone size="20px" />}>
-                                                        +91-988888888
-                                                    </Button>
-                                                    <Button
-                                                        size="md"
-                                                        height="48px"
-                                                        width="auto"
-                                                        variant="ghost"
-                                                        color={'white'}
-                                                        _hover={{ border: '2px solid #1C6FEB' }}
-                                                        leftIcon={<MdEmail size="20px" />}>
-                                                        hello@abc.com
-                                                    </Button>
-                                                    <Button
-                                                        size="md"
-                                                        height="48px"
-                                                        width="auto"
-                                                        variant="ghost"
-                                                        color={'white'}
-                                                        _hover={{ border: '2px solid #1C6FEB' }}
-                                                        leftIcon={<MdLocationOn size="20px" />}
-                                                    >
-                                                        Mumbai , India
-                                                    </Button>
-                                                    <Button
-                                                        size="md"
-                                                        height="48px"
-                                                        width="auto"
-                                                        variant="ghost"
-                                                        color={'white'}
-                                                        _hover={{ border: '2px solid #1C6FEB' }}
-                                                    >
+                                                <VStack pl={0} ml={{ base: 0, md: 5 }} align={'flex-start'} justifyContent={'center'} spacing={0} >
+                                                    <Text ml={'40px'} color={'white'} mt={{ sm: 2, md: 2, lg: 2 }} >
+                                                        Fostering a culture of transparency and open communication
+                                                    </Text>
+                                                    <br />
+                                                    <Text ml={'40px'} color={'white'} mt={{ sm: 2, md: 2, lg: 2 }} >
+                                                        By providing anonymity, feedback can reveal hidden issues, leading to constructive changes that improve workplace morale and productivity.
+                                                    </Text>
+                                                    <br />
+                                                    <Text ml={'40px'} color={'white'} mt={{ sm: 2, md: 2, lg: 2 }} >
                                                         This is an anonymous form, please use it responsibly.
-                                                    </Button>
+                                                    </Text>
                                                 </VStack>
                                             </Box>
                                         </Box>

@@ -10,19 +10,19 @@ export default function Pricing() {
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Check Our Pricing</h1>
-            <p className="font13">
+            {/* <p className="font13">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
               <br />
               labore et dolore magna aliquyam erat, sed diam voluptua.
-            </p>
+            </p> */}
           </HeaderInfo>
           <TablesWrapper className="flexSpaceNull">
             <TableBox>
               <PricingTable
                 icon="roller"
-                price="$29,99/mo"
+                price=" ₹29,99/mo"
                 title="Starter"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                // text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 offers={[
                   { name: "Product Offer", cheked: true },
                   { name: "Offer", cheked: true },
@@ -36,9 +36,9 @@ export default function Pricing() {
             <TableBox>
               <PricingTable
                 icon="monitor"
-                price="$49,99/mo"
+                price=" ₹49,99/mo"
                 title="Basic"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                // text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 offers={[
                   { name: "Product Offer", cheked: true },
                   { name: "Offer", cheked: true },
@@ -52,9 +52,9 @@ export default function Pricing() {
             <TableBox>
               <PricingTable
                 icon="browser"
-                price="$59,99/mo"
+                price=" ₹59,99/mo"
                 title="Golden"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                // text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
                 offers={[
                   { name: "Product Offer", cheked: true },
                   { name: "Offer", cheked: true },
