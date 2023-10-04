@@ -9,7 +9,9 @@ import React from 'react'
 import Nav from './components/Navbar'
 import ShowCardForm from './components/ShowCardForm'
 import Contact from '../../components/Sections/Footer'
-import EmployeeHoursTracker from './components/Timeline'
+import BarChartComponent from './components/Timeline'
+// import BarChart from './components/Timeline'
+// import EmployeeHoursTracker from './components/Timeline'
 
 function Home() {
     const goToForum = () => {
@@ -17,10 +19,12 @@ function Home() {
     }
     return (
         <div>
+            {/* <EmployeeHoursTracker/> */}
+            {/* <BarChart/> */}
             <ChakraProvider>
                 <Nav />
+                <BarChartComponent/>
                 <Container maxW={'7xl'} p="12">
-                    <EmployeeHoursTracker/>
                     <Heading as="h1">Live Forms for you to fill...</Heading>
                     <SimpleGrid gap={3} columns={{base:1,md:3}}>
                         <Box onClick={()=>goToForum()}>
