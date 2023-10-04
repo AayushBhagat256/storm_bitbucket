@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 // Screens
 import Landing from "./screens/Landing.jsx";
 import Login from "./screens/Login.jsx";
+import Home from "./screens/Home/Home.jsx";
 
 export default function App() {
   return (
@@ -22,7 +23,9 @@ export default function App() {
         <Routes>
           <Route path='/' element={<><Landing /></>} />
         </Routes>
-
+        <Routes>
+          <Route path='/home' element={<><Home /></>} />
+        </Routes>
       </Router>
 
     </>
