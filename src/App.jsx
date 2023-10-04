@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import './App.css'
 // Screens
 import Landing from "./screens/Landing.jsx";
 import Login from "./screens/Login.jsx";

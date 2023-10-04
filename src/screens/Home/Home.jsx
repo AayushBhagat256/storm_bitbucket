@@ -9,6 +9,7 @@ import React from 'react'
 import Nav from './components/Navbar'
 import ShowCardForm from './components/ShowCardForm'
 import Contact from '../../components/Sections/Footer'
+import EmployeeHoursTracker from './components/Timeline'
 
 function Home() {
     const goToForum = () => {
@@ -19,6 +20,7 @@ function Home() {
             <ChakraProvider>
                 <Nav />
                 <Container maxW={'7xl'} p="12">
+                    <EmployeeHoursTracker/>
                     <Heading as="h1">Live Forms for you to fill...</Heading>
                     <SimpleGrid gap={3} columns={{base:1,md:3}}>
                         <Box onClick={()=>goToForum()}>
