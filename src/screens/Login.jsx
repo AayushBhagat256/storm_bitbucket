@@ -29,7 +29,8 @@ function Login() {
             "company_code": comCode,
             "email": email,
             "password": pass,
-            "role": "emp"
+            "role": "emp",
+            "name": name
         });
 
         const config = {
