@@ -7,6 +7,7 @@ import Landing from "./screens/Landing.jsx";
 import Login from "./screens/Login.jsx";
 import Home from "./screens/Home/Home.jsx";
 import FeedbackForm from "./screens/FeedbackForm.jsx";
+import ContactEmpForm from "./screens/employeeFeedback/EmpForm";
 
 export default function App() {
   return (
@@ -28,6 +29,9 @@ export default function App() {
         </Routes>
         <Routes>
           <Route path='/home' element={<><Home /></>} />
+        </Routes>
+        <Routes>
+          <Route path='/empForm' element={<><ContactEmpForm /></>} />
         </Routes>
       </Router>
 
