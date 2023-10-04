@@ -6,19 +6,20 @@ import FullButton from "../Buttons/FullButton";
 import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const nav = useNavigate()
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="extraBold font60">We are Digital Agency.</h1>
+          <h1 className="extraBold font60">Welcome to ForumNexus.</h1>
           <HeaderP className="font13 semiBold">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-            voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+          ForumNexus is at the forefront of reshaping HR management with its cutting-edge forum-based solutions. By introducing powerful forums into the HR landscape, we are ushering in a new era of efficiency and collaboration. Our platform streamlines communication between employees, managers, and HR teams, fostering a culture of open dialogue and problem-solving.
           </HeaderP>
           <BtnWrapper>
-            <FullButton title="Get Started" />
+            <FullButton title="Get Started"action={() => nav('/login')}  />
           </BtnWrapper>
         </div>
       </LeftSide>
@@ -31,7 +32,7 @@ export default function Header() {
             </QuotesWrapper>
             <div>
               <p className="font15 whiteColor">
-                <em>Friends, such as we desire, are dreams and fables. Friendship demands the ability to do without it.</em>
+                <em>Connect, Collaborate, and Empower Your Workforce.</em>
               </p>
               <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Ralph Waldo Emerson</p>
             </div>
