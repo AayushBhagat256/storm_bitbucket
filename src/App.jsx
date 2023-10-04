@@ -6,11 +6,14 @@ import './App.css'
 import Landing from "./screens/Landing.jsx";
 import Login from "./screens/Login.jsx";
 import Home from "./screens/Home/Home.jsx";
-import FeedbackForm from "./screens/FeedbackForm.jsx";
+import SurveyForm from "./screens/employeeForms/SurveyForm";
+import { ChakraProvider } from "@chakra-ui/react";
+import SurveyCreationTool from "./screens/forms/SurveyCreationTool";
 
 export default function App() {
   return (
     <>
+    <ChakraProvider>
       <Router>
 
 
@@ -24,13 +27,14 @@ export default function App() {
         </Routes>
         <Routes>
           <Route path='/' element={<><Landing /></>} />
-          <Route path='/feedback-form' element={<FeedbackForm/>} />
+          <Route path='/survey-form' element={<SurveyCreationTool/>} />
         </Routes>
         <Routes>
           <Route path='/home' element={<><Home /></>} />
+          <Route path='/survey' element={<><SurveyForm /></>} />
         </Routes>
       </Router>
-
+      </ChakraProvider>
     </>
   );
 }

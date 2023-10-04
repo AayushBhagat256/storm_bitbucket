@@ -18,15 +18,22 @@ import FormControl from "@mui/material/FormControl";
 import DragIndicatorIcon from "@mui/icons-material/DragIndicator";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import FileCopyIcon from '@mui/icons-material/FileCopy';
+import { ques } from "./questions";
 
 //Form Elements
 import { formEl } from "../constants";
 import { FormLabel, Radio, RadioGroup } from "@mui/material";
 
 const TextFieldInput = ({ item, handleValue, deleteEl, handleRequired, handleElType,duplicateElement }) => {
+    // console.log(ques.sections)
+    // const list = ques.sections
+    // const listOfQues = list.questions;
+    // console.log(list)
   return (
     <Fragment>
       <Paper elevation={1}>
+        {/* {ques.sections.map(que => ( */}
+        <>
         <Box sx={{ textAlign: "center" }}>
           <DragIndicatorIcon
             sx={{ transform: "rotate(-90deg)", cursor: "all-scroll" }}
@@ -42,7 +49,9 @@ const TextFieldInput = ({ item, handleValue, deleteEl, handleRequired, handleElT
                 fullWidth
                 required={item.required}
                 placeholder="Textfield Label"
-                defaultValue={"What do you like most about your work environment at [Company Name]?"}
+                multiline
+                rows={2}
+                // defaultValue={que.question}
                 InputProps={{
                     readOnly: true,
                 }}
@@ -52,20 +61,39 @@ const TextFieldInput = ({ item, handleValue, deleteEl, handleRequired, handleElT
                 variant="outlined"
                 fullWidth
                 placeholder="Textfield Input Field"
+                multiline
                 // disabled
               />
             </Grid>
             <Grid item xs={3}>
               <FormControl fullWidth>
-              <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
+              {/* <FormLabel id="demo-radio-buttons-group-label">Type</FormLabel>
                 <RadioGroup
                     aria-labelledby="demo-radio-buttons-group-label"
                     defaultValue="female"
                     name="radio-buttons-group"
+                    value={item.type}
+                    onChange={(e) => handleElType(item.id, e.target.value)}
                 >
-                    <FormControlLabel value="female" control={<Radio />} label="Text" />
+                    <FormControlLabel value="female" defaultChecked control={<Radio />} label="Text" />
                     <FormControlLabel value="male" control={<Radio />} label="Radio" />
-                </RadioGroup>
+                </RadioGroup> */}
+                <InputLabel id="el-type-label">Type</InputLabel>
+                <Select
+                  labelId="el-type-label"
+                  id="el-type"
+                  label="Type"
+                  value={item.type}
+                  onChange={(e) => handleElType(item.id, e.target.value)}
+                  defaultChecked
+                >
+                  {formEl &&
+                    formEl.map((el, key) => (
+                      <MenuItem key={key} value={el.value}>
+                        {el.label}
+                      </MenuItem>
+                    ))}
+                </Select>
               </FormControl>
             </Grid>
           </Grid>
@@ -104,6 +132,8 @@ const TextFieldInput = ({ item, handleValue, deleteEl, handleRequired, handleElT
             sx={{ ml: 2 }}
           />
         </FormGroup>
+        </>
+        {/* ))} */}
       </Paper>
     </Fragment>
   );
