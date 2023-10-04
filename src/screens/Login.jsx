@@ -11,8 +11,8 @@ function Login() {
                         <Components.Title>Create Account</Components.Title>
                         <Components.Input type='text' placeholder='Name' />
                         <Components.Input type='email' placeholder='Email' />
-                        <Components.Input type='text' placeholder='Enter your comapany code' />
                         <Components.Input type='password' placeholder='Password' />
+                        <Components.Input type='text' placeholder='Enter your comapany code' />
                         <Components.Button className='signUp'>Sign Up</Components.Button>
                     </Components.Form>
                 </Components.SignUpContainer>
