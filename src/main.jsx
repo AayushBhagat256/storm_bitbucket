@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./style/flexboxgrid.min.css";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  // </React.StrictMode>,
 )
