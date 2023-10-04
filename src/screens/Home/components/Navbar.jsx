@@ -57,7 +57,7 @@ export default function Nav() {
           </HStack >
 
           <Flex alignItems={'center'}>
-            <Stack direction={'row'} spacing={7}>
+            <Stack direction={'row'} mr={5} spacing={7}>
               {/* <Button onClick={toggleColorMode}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button> */}

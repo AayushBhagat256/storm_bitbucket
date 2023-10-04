@@ -1,0 +1,101 @@
+#conbox{
+    padding: 30px;
+    /* width: 500px; */
+}
+.inpfie{
+    width: 400px;
+}
+.infobox{
+    width: 500px;
+    /* overflow: hidden; */
+    /* overflow-wrap: break-word; */
+}
+#box123{
+    margin-top: -12px;
+}
+
+
+.btn12send {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(180deg, #ff4b2b 0%, #ff4b2b 100%);
+    /* color: white; */
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    height: 45px;
+    width: 130px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    transition: all 0.3s;
+  }
+  
+  .btn12send:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .btn12send:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn12send span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+  }
+  
+  .btn12send svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+  }
+  
+  .btn12send .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+  }
+  
+  .btn12send:hover .svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .btn12send:hover svg {
+    transform: rotate(45deg);
+  }
+  
+  
+  
+  
+
+@media (max-width:800px){
+    #conbox{
+        padding: 0px;
+        /* width: auto; */
+    }
+    .inpfie{
+        width: 200px;
+    }
+    .infobox{
+        width: 400px;
+        overflow: overlay;
+        /* overflow-inline: 300px; */
+    }
+    .arrow{
+        /* transform: rotate(-7.639deg); */
+        transform: rotate(-17.639deg);
+    }
+}

@@ -9,6 +9,8 @@ import Home from "./screens/Home/Home.jsx";
 import SurveyForm from "./screens/employeeForms/SurveyForm";
 import { ChakraProvider } from "@chakra-ui/react";
 import SurveyCreationTool from "./screens/forms/SurveyCreationTool";
+import ContactEmpForm from "./screens/employeeFeedback/EmpForm";
+import { UserContext } from "./context/UserContext";
 
 export default function App() {
   return (
@@ -22,6 +24,7 @@ export default function App() {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link href="https://fonts.googleapis.com/css2?family=Khula:wght@400;600;800&display=swap" rel="stylesheet" />
         </Helmet>
+        <UserContext>
         <Routes>
           <Route path='/login' element={<><Login /></>} />
         </Routes>
@@ -33,6 +36,10 @@ export default function App() {
           <Route path='/home' element={<><Home /></>} />
           <Route path='/survey' element={<><SurveyForm /></>} />
         </Routes>
+        <Routes>
+          <Route path='/empForm' element={<><ContactEmpForm /></>} />
+        </Routes>
+        </UserContext>
       </Router>
       </ChakraProvider>
     </>
