@@ -10,12 +10,16 @@ import Nav from './components/Navbar'
 import ShowCardForm from './components/ShowCardForm'
 import Contact from '../../components/Sections/Footer'
 import BarChartComponent from './components/Timeline'
+import { useNavigate } from 'react-router'
 // import BarChart from './components/Timeline'
 // import EmployeeHoursTracker from './components/Timeline'
 
 function Home() {
-    const goToForum = () => {
+    const nav = useNavigate()
+    const goToForum = (path) => {
         console.log("clicked")
+        console.log(path)
+        nav(path)
     }
     return (
         <div>
@@ -27,7 +31,7 @@ function Home() {
                 <Container maxW={'7xl'} p="12">
                     <Heading as="h1">Live Forms for you to fill...</Heading>
                     <SimpleGrid gap={3} columns={{base:1,md:3}}>
-                        <Box onClick={()=>goToForum()}>
+                        <Box onClick={()=>goToForum('/empForm')}>
                         <ShowCardForm title={"Employee's feedback"} />
                         </Box>
                         <Box>
