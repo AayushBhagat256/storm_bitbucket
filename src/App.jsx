@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 // Screens
 import Landing from "./screens/Landing.jsx";
 import Login from "./screens/Login.jsx";
+import FeedbackForm from "./screens/FeedbackForm.jsx";
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         </Routes>
         <Routes>
           <Route path='/' element={<><Landing /></>} />
+          <Route path='feedback-form' element={<FeedbackForm/>} />
         </Routes>
 
       </Router>
